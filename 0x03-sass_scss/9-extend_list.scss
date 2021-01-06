@@ -1,0 +1,20 @@
+/* assign Font size 12px to all tags of class .info */
+/* assign Text color #00FF00 to all tags of class .success and extend style of the class .info */
+/* assign Text color #FF0000 to all tags of class .warning and extend style of the class .info */
+%font_size {
+    font-size: 12px;
+}
+
+.info {
+    @extend %font_size;
+}
+
+.success {
+    color: #00FF00;
+    @extend .info;
+}
+
+.warning {
+    color: #FF0000;
+    @extend .info;
+}

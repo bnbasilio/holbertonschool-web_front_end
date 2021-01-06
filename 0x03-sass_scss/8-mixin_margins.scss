@@ -1,0 +1,14 @@
+/* assign Margin left and right at 10px to body tags */
+/* assign Margin left and right at 15px to div tags */
+@mixin set_margin($margin) {
+    margin-left: $margin;
+    margin-right: $margin;
+}
+
+body {
+    @include set_margin(10px);
+}
+
+div {
+    @include set_margin(15px);
+}

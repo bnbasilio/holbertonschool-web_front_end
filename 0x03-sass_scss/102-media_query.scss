@@ -1,0 +1,32 @@
+/* assign Font size 20px to h1 tags */
+/* assign Font size 18px to h1 tags, when your screen width is smaller than 960px */
+/* assign Font size 16px to h1 tags, when your screen width is smaller than 640px */
+/* assign Font size 14px to h1 tags, when your screen width is smaller than 320px */
+/* assign ext color #1D1D1D to h1.small tags, when your screen width is smaller than 320px */
+@mixin small {
+    @media screen and (max-width: 320px) { @content; }
+}
+
+@mixin medium {
+    @media screen and (max-width: 640px) { @content; }
+}
+
+@mixin large {
+    @media screen and (max-width: 960px) { @content; }
+}
+
+h1 {
+    font-size: 20px;
+    @include large {
+        font-size: 18px;
+    }
+    @include medium {
+        font-size: 16px;
+    }
+    @include small {
+        font-size: 14px;
+        &.small {
+            color: #1D1D1D;
+        }
+    }
+}
